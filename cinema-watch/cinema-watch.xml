@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>cinema-watch</Name>
+  <Repository>ghcr.io/pilascat/cinema-watch:latest</Repository>
+  <Registry>https://github.com/PilaScat/cinema-watch/pkgs/container/cinema-watch</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/PilaScat/cinema-watch/issues</Support>
+  <Project>https://github.com/PilaScat/cinema-watch</Project>
+  <Overview>Ticket hunts for Italian cinemas (UCI, The Space, Webtic cinemas and 18Tickets): Telegram alerts with the seat map when showings come out or good seats free up. Hunts, cinemas and settings are managed from the web UI, which is in Italian.</Overview>
+  <Category>Tools: Other:</Category>
+  <WebUI>http://[IP]:[PORT:8790]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/PilaScat/unraid-templates/main/cinema-watch/cinema-watch.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/PilaScat/cinema-watch/main/assets/icons/icon-512.png</Icon>
+  <ExtraParams>--restart=unless-stopped --read-only --tmpfs /tmp --security-opt=no-new-privileges --log-opt max-size=10m --log-opt max-file=3</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="8790" Default="8790" Mode="tcp" Description="Web UI port." Type="Port" Display="always" Required="true" Mask="false">8790</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/cinema-watch" Mode="rw" Description="Configuration, state, seat maps, history and log. On start the container gives it to PUID:PGID." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cinema-watch</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="User that owns the data folder and runs the app. 99 is nobody on Unraid." Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="Group that owns the data folder and runs the app. 100 is users on Unraid." Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Config Name="UI_PASSWORD" Target="UI_PASSWORD" Default="" Mode="{3}" Description="Web UI password. Empty: no password." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="TRUST_PROXY" Target="TRUST_PROXY" Default="" Mode="{3}" Description="1 when a reverse proxy in front sets X-Forwarded-For. Only needed with a password, for the per-IP login lockout." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="TELEGRAM_TOKEN" Target="TELEGRAM_TOKEN" Default="" Mode="{3}" Description="Bot token, if not set from the web UI. The web UI value wins." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="TELEGRAM_CHAT_ID" Target="TELEGRAM_CHAT_ID" Default="" Mode="{3}" Description="Main chat, if not set from the web UI. The web UI value wins." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>
