@@ -7,6 +7,7 @@ Docker templates for Unraid Community Applications, for the apps I build and mai
 | App | What it does | Template |
 |---|---|---|
 | [cinema-watch](https://github.com/PilaScat/cinema-watch) | Ticket hunts for Italian cinemas (UCI, The Space, Webtic cinemas and 18Tickets), with Telegram alerts and the seat map | [cinema-watch.xml](cinema-watch/cinema-watch.xml) |
+| [Plex Rewind](https://github.com/RaunoT/plex-rewind) by RaunoT | Plex statistics Spotify Wrapped style, from Tautulli or Tracearr, with Seerr requests | [plex-rewind.xml](plex-rewind/plex-rewind.xml) |
 
 ## Install
 

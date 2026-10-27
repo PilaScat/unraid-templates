@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>plex-rewind</Name>
+  <Repository>ghcr.io/raunot/plex-rewind:latest</Repository>
+  <Registry>https://github.com/RaunoT/plex-rewind/pkgs/container/plex-rewind</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/RaunoT/plex-rewind/issues</Support>
+  <Project>https://github.com/RaunoT/plex-rewind</Project>
+  <Overview>Plex statistics and habits, Spotify Wrapped style: a yearly Rewind for each user, a dashboard with top titles and users, and live activity. Statistics come from Tautulli or Tracearr, requests from Seerr. Everything else is set up from the web UI after logging in with Plex.</Overview>
+  <Category>MediaServer:Other Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8383]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/PilaScat/unraid-templates/main/plex-rewind/plex-rewind.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RaunoT/plex-rewind/main/public/icon-512x512.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="8383" Default="8383" Mode="tcp" Description="Web UI port." Type="Port" Display="always" Required="true" Mask="false">8383</Config>
+  <Config Name="Config" Target="/app/config" Default="/mnt/user/appdata/plex-rewind" Mode="rw" Description="Settings saved from the web UI. On start the container gives it to PUID:PGID." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plex-rewind</Config>
+  <Config Name="NEXT_PUBLIC_SITE_URL" Target="NEXT_PUBLIC_SITE_URL" Default="" Mode="{3}" Description="Address you open the app at, for example http://192.168.1.10:8383 or https://rewind.example.com." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="NEXTAUTH_URL" Target="NEXTAUTH_URL" Default="" Mode="{3}" Description="Same as NEXT_PUBLIC_SITE_URL." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="NEXTAUTH_SECRET" Target="NEXTAUTH_SECRET" Default="" Mode="{3}" Description="Encrypts the login token. Generate one with: openssl rand -base64 32" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="User that owns the config folder and runs the app. 99 is nobody on Unraid." Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="Group that owns the config folder and runs the app. 100 is users on Unraid." Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+</Container>
