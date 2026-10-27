@@ -13,7 +13,7 @@
   <Category>MediaServer:Other Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:8383]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/PilaScat/unraid-templates/main/plex-rewind/plex-rewind.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/RaunoT/plex-rewind/main/public/icon-512x512.png</Icon>
+  <Icon>https://raw.githubusercontent.com/RaunoT/plex-rewind/develop/public/icon-512x512.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
