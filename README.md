@@ -1,6 +1,6 @@
 # Unraid templates by PilaScat
 
-Docker templates for Unraid Community Applications, for the apps I build and maintain.
+Docker templates for Unraid Community Applications, for the apps I run, build or maintain.
 
 ## Apps
 
@@ -13,7 +13,7 @@ Docker templates for Unraid Community Applications, for the apps I build and mai
 
 From the Apps tab in Unraid, search for the app name. Without Community Applications, copy the template to `/boot/config/plugins/dockerMan/templates-user/my-<app>.xml` and add the container from the Docker tab.
 
-Support for each app is in the issues of its own repository.
+Support for each app is in the issues of its own repository, not here.
 
 ## License
 
