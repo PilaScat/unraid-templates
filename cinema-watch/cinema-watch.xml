@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/PilaScat/cinema-watch/issues</Support>
   <Project>https://github.com/PilaScat/cinema-watch</Project>
-  <Overview>Ticket hunts for Italian cinemas (UCI, The Space, Webtic cinemas and 18Tickets): Telegram alerts with the seat map when showings come out or good seats free up. Hunts, cinemas and settings are managed from the web UI, which is in Italian.</Overview>
+  <Overview>Ticket hunts for Italian cinemas (UCI, The Space, Webtic cinemas and 18Tickets): Telegram alerts with the seat map when showings come out or good seats free up. Hunts, cinemas and settings are managed from the web UI.</Overview>
   <Category>Tools: Other:</Category>
   <WebUI>http://[IP]:[PORT:8790]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/PilaScat/unraid-templates/main/cinema-watch/cinema-watch.xml</TemplateURL>
